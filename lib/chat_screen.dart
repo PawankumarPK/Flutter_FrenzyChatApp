@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frenzy_chat_app/chat_message.dart';
 
 class ChatScreen extends StatefulWidget {
   ChatScreen({Key key}) : super(key: key);
@@ -9,9 +10,17 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
 
   final TextEditingController _textController = new TextEditingController();
+  final List<ChatMessage>_message = <ChatMessage> [];
 
   void _handleSubmitted(String text){
     _textController.clear();
+    ChatMessage message = new ChatMessage(
+      text:  text,
+    );
+    //rebuild list
+    setState(() {
+      _message.insert(0, message);
+    });
   }
 
   Widget _textComposerWidget(){

@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
         appBar: new AppBar(
         title: new Text("Frenzy Chat App"),
       ),
-      body: new ChatScreen(),
+      body: new ChatScreen()
     );
   }
 }
