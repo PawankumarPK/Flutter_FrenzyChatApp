@@ -71,11 +71,11 @@ class _ChatScreenState extends State<ChatScreen> {
               color: Theme.of(context).cardColor,
               
             ),
-            child: _textComposerWidget(),
+            child: _textComposerWidget()
           )
 
         ],
       );
-      //check user crediential
+  
   }
 }
