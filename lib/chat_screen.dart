@@ -17,7 +17,7 @@ class _ChatScreenState extends State<ChatScreen> {
     ChatMessage message = new ChatMessage(
       text:  text,
     );
-    //rebuild list
+    //rebuild list unvalidate
     setState(() {
       _message.insert(0, message);
     });
